@@ -15,10 +15,6 @@
 	.row {
 		max-width: 104rem;    /*-----------  MAXIMUM WIDTH OF GRID SYSTEM  -----------*/
 	}
-	#header {
-		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-	}
 	#services-section .service {
 		height: 40rem;
 	}
