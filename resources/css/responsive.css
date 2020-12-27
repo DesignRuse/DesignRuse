@@ -1,5 +1,4 @@
 /*--- Big desktops ---*/
-
 @media only screen and (min-width:112.5em) {
 	/*1800px*/
 	html {
@@ -9,19 +8,25 @@
 
 
 /*--- Tablets in landscape mode ---*/
-
-@media only screen and (max-width:75em) {
-	/*1200px*/
+@media only screen and (max-width:75em) {       /*1200px*/
 	html {
 		font-size: 56.25%;
 	}
+    #request-a-quote-section #request-a-qoute {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../images/andy-holmes-unsplash.jpg);
+        background-size: cover;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    }
+    #request-a-qoute .form-container {
+        width: 65%;
+        padding: 6rem;
+    }
 }
 
 
 /*--- Tablets in portrait mode ---*/
-
-@media only screen and (max-width:56.25em) {
-	/*900px*/
+@media only screen and (max-width:56.25em) {    /*900px*/
 	html {
 		font-size: 50%;
 	}
@@ -129,6 +134,16 @@
 	#request-a-quote-section {
 		padding: 10rem 0 5rem 0;
 	}
+    #request-a-quote-section #request-a-qoute {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../images/andy-holmes-unsplash.jpg);
+        background-size: cover;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    }
+    #request-a-qoute .form-container {
+        width: 100%;
+        padding: 6rem;
+    }
 	#footer {
 		padding: 5rem 0 .5rem 0;
 	}
@@ -136,7 +151,6 @@
 
 
 /*--- Phones ---*/
-
 @media only screen and (max-width:37.5em) {
 	/*600px*/
 	.row {	
