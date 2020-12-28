@@ -40,6 +40,15 @@
 
 /*--- Tablets in portrait mode ---*/
 @media only screen and (max-width:56.25em) {    /*900px*/
+	.row {
+		width: 90%;
+		max-width: 65rem !important;
+		margin-bottom: 6rem;
+	}
+	.row [class^="colm-"] {
+		width: 100%;
+		margin: 0 auto 6rem auto !important;
+	}
 	html {
 		font-size: 50%;
 	}
@@ -164,26 +173,9 @@
 
 
 /*--- Phones ---*/
-@media only screen and (max-width:37.5em) {
-	/*600px*/
+@media only screen and (max-width:37.5em) {     /*600px*/
 	.row {
-		width: 90%;
 		max-width: 50rem !important;
-		margin-bottom: 6rem;
-	}
-	.row [class^="colm-"] {
-		width: 100%;
-		margin: 0 auto 6rem auto !important;
-	}
-	html {
-		font-size: 50%;
-	}
-	body {
-		padding: 0;
-	}
-	#header {
-		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 	}
 	.section-title {
 		font-size: 2rem;
