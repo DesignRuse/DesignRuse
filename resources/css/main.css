@@ -12,6 +12,11 @@
 	box-sizing: inherit;
 }
 
+::selection {
+	background-color: #7ed56f;
+    color: #fff;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -209,8 +214,7 @@ button:hover::after {
 }
 
 .section-heading {
-	font-size: 1.6rem;
-	!important;
+	font-size: 1.6rem !important;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
@@ -383,7 +387,7 @@ button:hover::after {
 }
 
 #logo-container #logo {
-	display: inline-block;
+	display: block;
 	height: 7.4rem;
 	animation: pulse 1.5s infinite;
 }
@@ -522,8 +526,7 @@ button:hover::after {
 }
 
 #services-section .heading {
-	font-size: 2.2rem;
-	!important;
+	font-size: 2.2rem !important;
 	margin-bottom: 20px;
 }
 
@@ -597,7 +600,7 @@ button:hover::after {
 	transition: all 0.3s ease-in;
 }
 
-/*#portfolio-section #works .work.work-1 {
+#portfolio-section #works .work.work-1 {
     top: 0;
     left: 0;
 }
@@ -625,40 +628,6 @@ button:hover::after {
 #portfolio-section #works .work.work-6 {
     top: 35%;
     right: 1rem;
-}*/
-
-#portfolio-section #works .work.work-1 {
-	top: 15%;
-	left: 0;
-}
-
-#portfolio-section #works .work.work-2 {
-	top: 15%;
-	right: 0;
-}
-
-#portfolio-section #works .work.work-3 {
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 100;
-}
-
-#portfolio-section #works .work.work-4 {
-	top: 90%;
-	right: 50%;
-	transform: translateX(50%);
-	z-index: 100;
-}
-
-#portfolio-section #works .work.work-5 {
-	top: 75%;
-	left: 0;
-}
-
-#portfolio-section #works .work.work-6 {
-	top: 75%;
-	right: 0;
 }
 
 #portfolio-section #works .work:hover {
