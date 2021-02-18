@@ -990,7 +990,7 @@ button:hover::after {
 	border-radius: 3px;
 	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 	        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	position: relative;
+    position: relative;
 }
 
 #request-a-qoute .form-container {
@@ -1066,13 +1066,60 @@ textarea:focus:invalid {
 	        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-#request-a-qoute #status {
-	width: 50%;
-	padding: 6rem;
-	text-align: center;
-	border-radius: 3px;
-	background-color: rgb(211, 250, 153);
+#request-a-qoute #memo-modal {
+	width: 100%;
+	height: 100%;
+    background-color: rgba(247, 247, 247, 0.8);
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+	left: 0;
+	z-index: 1500;
+	opacity: 0;
+	display: none;
+	-webkit-animation: status 4s ease forwards;
+	        animation: status 4s ease forwards;
 }
+
+#memo-modal #memo {
+	width: 50%;
+	height: 50%;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	padding: 1rem;
+	border-radius: 3rem;
+	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+	        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+	display: table;
+}
+
+#memo::after {
+      content: '';
+      display: inline-block;
+      width: 12%;
+      height: 15%;
+      background: inherit;
+      position: absolute;
+      bottom: -15%;
+      left: calc(20% - 6%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);  
+}
+
+#memo #memo-text {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-align: center;
+	word-wrap: break-word;
+}
+
 
 #footer {
 	background-color: #333;
@@ -1181,57 +1228,6 @@ textarea:focus:invalid {
 	width: 50%;
 	padding: 5rem 3rem 5rem 9rem;
 	float: right;
-}
-
-#memo-modal {
-	width: 100%;
-	height: 100%;
-	/*background-color: rgba(0, 0, 0, 0.8);*/
-    background-color: rgba(247, 247, 247, 0.8);
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: 1500;
-	opacity: 0;
-	display: none;
-	-webkit-animation: status 4s ease forwards;
-	        animation: status 4s ease forwards;
-}
-
-#memo-modal #memo {
-	width: 50%;
-	height: 50%;
-	padding: 1rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%) skewX(-12deg);
-	    -ms-transform: translate(-50%, -50%) skewX(-12deg);
-	        transform: translate(-50%, -50%) skewX(-12deg);
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	display: table;
-}
-
-#memo #memo-text {
-	display: table-cell;
-	vertical-align: middle;
-    -webkit-transform: skewX(12deg);
-        -ms-transform: skewX(12deg);
-            transform: skewX(12deg);
-	color: #fff;
-	font-size: 3.5rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 2px;
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-align: center;
-	word-wrap: break-word;
 }
 
 
