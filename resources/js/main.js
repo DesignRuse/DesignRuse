@@ -10,7 +10,7 @@
 	function success() {
 		contactForm.reset();
         memo.classList.add('success');
-        memoText.innerHTML = 'Thanks! Your message has been sent.';
+        memoText.innerHTML = 'Thanks!<br /> Your message has been sent.';
 		memoModal.style.opacity = '1';
 		memoModal.style.display = 'block';
 		setTimeout(function () {
@@ -23,7 +23,7 @@
 
 	function error() {
         memo.classList.add('error');
-        memoText.innerHTML = 'Oops! There was a problem.';
+        memoText.innerHTML = 'Oops!<br /> There was a problem.';
 		memoModal.style.opacity = '1';
 		memoModal.style.display = 'block';
 		setTimeout(function () {
@@ -31,7 +31,7 @@
 			memoModal.style.display = 'none';
             memo.classList.remove('error');
             memoText.innerHTML = '';
-		}, 4000);
+		}, 60000000000);
 	}
 
 	// handle the contactForm submission event

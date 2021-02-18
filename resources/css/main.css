@@ -1078,13 +1078,13 @@ textarea:focus:invalid {
 	z-index: 1500;
 	opacity: 0;
 	display: none;
-	-webkit-animation: status 4s ease forwards;
-	        animation: status 4s ease forwards;
+	-webkit-animation: status 60s ease forwards;
+	        animation: status 60s ease forwards;
 }
 
 #memo-modal #memo {
-	width: 50%;
-	height: 50%;
+	width: 40%;
+	height: 40%;
     position: relative;
     top: 35%;
     left: 50%;
@@ -1104,7 +1104,7 @@ textarea:focus:invalid {
       background: inherit;
       position: absolute;
       bottom: -15%;
-      left: calc(20% - 6%);
+      left: calc(18% - 6%);
       clip-path: polygon(0 0, 100% 0, 50% 100%);  
 }
 
@@ -1112,7 +1112,7 @@ textarea:focus:invalid {
 	display: table-cell;
 	vertical-align: middle;
 	color: #fff;
-	font-size: 3.5rem;
+	font-size: 2.2rem;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 2px;
