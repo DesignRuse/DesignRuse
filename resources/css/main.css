@@ -1078,8 +1078,8 @@ textarea:focus:invalid {
 	z-index: 1500;
 	opacity: 0;
 	display: none;
-	-webkit-animation: status 60s ease forwards;
-	        animation: status 60s ease forwards;
+	-webkit-animation: status 60s ease-in-out forwards;
+	        animation: status 60s ease-in-out forwards;
 }
 
 #memo-modal #memo {
