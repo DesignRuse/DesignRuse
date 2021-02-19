@@ -1055,6 +1055,7 @@ textarea:focus:invalid {
 	background-image: var(--green-background-gradient);
 	color: #fff;
 	border: none;
+    outline: none;
 	cursor: pointer;
 }
 

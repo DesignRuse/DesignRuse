@@ -192,4 +192,7 @@
 	#testimonials-section .testimonial .quote {
 		transform: skewX(0);
 	}
+    #memo::after {
+      left: 18%;
+    }
 }
