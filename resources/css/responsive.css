@@ -172,6 +172,15 @@
     #memo::after {
       left: calc(18% - 2%);
     }
+    #contact-us-modal #popup {
+		width: 90%;
+		max-width: 65rem !important;
+    }
+	#popup .form-container {
+		width: 100%;
+		padding: 2rem;
+        margin: 0 auto;
+	}
 }
 
 
