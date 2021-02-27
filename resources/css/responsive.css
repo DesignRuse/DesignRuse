@@ -175,10 +175,13 @@
     #contact-us-modal #popup {
 		width: 90%;
 		max-width: 65rem !important;
+        background-image: -o-linear-gradient(165deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../images/antonika-chanel-RJCslxmvBcs-unsplash.jpg);
+        background-image: linear-gradient(-75deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../images/antonika-chanel-RJCslxmvBcs-unsplash.jpg);
+        background-size: cover;
     }
 	#popup .form-container {
 		width: 100%;
-		padding: 2rem;
+		padding: 3rem;
         margin: 0 auto;
 	}
 }
