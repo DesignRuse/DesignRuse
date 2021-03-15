@@ -1,58 +1,68 @@
 ﻿window.addEventListener('DOMContentLoaded', function () {
 
-	// get the contactForm elements defined in your contactForm HTML above
-	var contactForm = document.getElementById('contact-form');
-	var memoModal = document.getElementById('memo-modal');
-    var memo = document.getElementById('memo');
-    var memoText = document.getElementById('memo-text');
-
-	// Success and Error functions for after the contactForm is submitted
-	function success() {
-		contactForm.reset();
-        memo.classList.add('success');
-        memoText.innerHTML = 'Thanks!<br /> Your message has been sent.';
-		memoModal.style.opacity = '1';
-		memoModal.style.display = 'block';
+	// Success and Error functions for after the form is submitted
+	function success(form) {
+		form.reset();
+		var parentOfFormContainer = form.parentElement.parentElement;
+		parentOfFormContainer.getElementsByClassName('memo')[0].classList.add('success');
+		parentOfFormContainer.getElementsByClassName('memo-text')[0].innerHTML = 'Thanks!<br /> Your message has been sent.';
+		parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.opacity = '1';
+		parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.display = 'block';
 		setTimeout(function () {
-			memoModal.style.opacity = '0';
-			memoModal.style.display = 'none';
-            memo.classList.remove('success');
-            memoText.innerHTML = '';
+			parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.opacity = '0';
+			parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.display = 'none';
+			parentOfFormContainer.getElementsByClassName('memo')[0].classList.remove('success');
+			parentOfFormContainer.getElementsByClassName('memo-text')[0].innerHTML = '';
 		}, 4000);
 	}
 
-	function error() {
-        memo.classList.add('error');
-        memoText.innerHTML = 'Oops!<br /> There was a problem.';
-		memoModal.style.opacity = '1';
-		memoModal.style.display = 'block';
+	function error(form) {
+		var parentOfFormContainer = form.parentElement.parentElement;
+		parentOfFormContainer.getElementsByClassName('memo')[0].classList.add('error');
+		parentOfFormContainer.getElementsByClassName('memo-text')[0].innerHTML = 'Oops!<br /> There was a problem.';
+		parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.opacity = '1';
+		parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.display = 'block';
 		setTimeout(function () {
-			memoModal.style.opacity = '0';
-			memoModal.style.display = 'none';
-            memo.classList.remove('error');
-            memoText.innerHTML = '';
+			parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.opacity = '0';
+			parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.display = 'none';
+			parentOfFormContainer.getElementsByClassName('memo')[0].classList.remove('error');
+			parentOfFormContainer.getElementsByClassName('memo-text')[0].innerHTML = '';
 		}, 60000000000);
 	}
 
-	// handle the contactForm submission event
-	contactForm.addEventListener('submit', function (ev) {
-		ev.preventDefault();
-		var data = new FormData(contactForm);
-		ajax(contactForm.method, contactForm.action, data, success, error);
-	});
+	// Handles the button click event and the subsequent form submission event
+	for (let i = 0; i < document.forms.length; i++) {
+		document.forms[i].getElementsByTagName('button')[0].addEventListener('click', function () {
+			document.forms[i].addEventListener('submit', function (ev) {
+				ev.preventDefault();
+				var data = new FormData(document.forms[i]);
+				ajax(document.forms[i].method, document.forms[i].action, data, document.forms[i], success, error);
+			});
+		});
+
+		//----- The code below is just another way of doing the same thing as the code above 
+
+		/*document.forms[i].getElementsByTagName('button')[0].onclick = () => {
+			document.forms[i].addEventListener('submit', function (ev) {
+				ev.preventDefault();
+				var data = new FormData(document.forms[i]);
+				ajax(document.forms[i].method, document.forms[i].action, data, document.forms[i], success, error);
+			});
+		}*/
+	}
 });
 
 // helper function for sending an AJAX request
-function ajax(method, url, data, success, error) {
+function ajax(method, url, data, form, success, error) {
 	var xhr = new XMLHttpRequest();
 	xhr.open(method, url);
 	xhr.setRequestHeader('Accept', 'application/json');
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState !== XMLHttpRequest.DONE) return;
 		if (xhr.status === 200) {
-			success(xhr.response, xhr.responseType);
+			success(form);
 		} else {
-			error(xhr.status, xhr.response, xhr.responseType);
+			error(form);
 		}
 	};
 	xhr.send(data);

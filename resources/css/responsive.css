@@ -169,7 +169,7 @@
 	#footer {
 		padding: 5rem 0 .5rem 0;
 	}
-    #memo::after {
+    .memo::after {
       left: calc(18% - 2%);
     }
     #contact-us-modal #popup {
@@ -204,7 +204,7 @@
 	#testimonials-section .testimonial .quote {
 		transform: skewX(0);
 	}
-    #memo::after {
+    .memo::after {
       left: 18%;
     }
 }
