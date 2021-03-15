@@ -27,7 +27,7 @@
 			parentOfFormContainer.getElementsByClassName('memo-modal')[0].style.display = 'none';
 			parentOfFormContainer.getElementsByClassName('memo')[0].classList.remove('error');
 			parentOfFormContainer.getElementsByClassName('memo-text')[0].innerHTML = '';
-		}, 60000000000);
+		}, 4000);
 	}
 
 	// Handles the button click event and the subsequent form submission event
@@ -67,4 +67,5 @@ function ajax(method, url, data, form, success, error) {
 	};
 	xhr.send(data);
 }
+
 
