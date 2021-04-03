@@ -1,7 +1,4 @@
-﻿
-
-window.addEventListener('DOMContentLoaded', function () {
-
+﻿window.addEventListener('DOMContentLoaded', function () {
 	// Success and Error functions for after the form is submitted
 	function success(form) {
 		form.reset();
@@ -34,29 +31,27 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	// Handles the button click event and the subsequent form submission event
 	for (let i = 0; i < document.forms.length; i++) {
-		document.forms[i].getElementsByTagName('button')[0].addEventListener('click', function () {
-			document.forms[i].addEventListener('submit', function (ev) {
-				ev.preventDefault();
-				// Submits form data to a Google Spreadsheet
-				if (document.forms[i] == document.forms['designruse-email-list']) {
-					var data = new FormData(document.forms[i]);
-					const scriptURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdNo8tURNDtQ-rbsIdvxIOKXGeZFtQmSXFQ0NNJ8W8QyXGa3w/formResponse?';
-					fetch(scriptURL, {
-							method: 'POST',
-							mode: 'no-cors',
-							cache: 'no-cache',
-							credentials: 'omit',
-							headers: {
-								'Content-Type': 'application/json'
-							},
-							redirect: 'follow',
-							body: data
-						})
-						.then(response => console.log('Success!', response))
-						.catch(error => console.error('Error!', error.message));
-				}
-				ajax(document.forms[i].method, document.forms[i].action, data, document.forms[i], success, error);
-			});
+		document.forms[i].getElementsByTagName('button')[0].addEventListener('click', function (ev) {
+			ev.preventDefault();
+			var data = new FormData(document.forms[i]);
+			// Submits form data to a Google Spreadsheet
+			if (document.forms[i] == document.forms[1]) {
+				var scriptURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdNo8tURNDtQ-rbsIdvxIOKXGeZFtQmSXFQ0NNJ8W8QyXGa3w/formResponse?';
+				fetch(scriptURL, {
+						method: 'POST',
+						mode: 'no-cors',
+						cache: 'no-cache',
+						credentials: 'omit',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						redirect: 'follow',
+						body: data
+					})
+					.then(response => console.log('Success!', response))
+					.catch(error => console.error('Error!', error.message));
+			}
+			ajax(document.forms[i].method, document.forms[i].action, data, document.forms[i], success, error);
 		});
 
 		//----- The code below is just another way of doing the same thing as the code above 
@@ -86,4 +81,3 @@ function ajax(method, url, data, form, success, error) {
 	};
 	xhr.send(data);
 }
-
