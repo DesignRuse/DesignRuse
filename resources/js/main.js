@@ -64,6 +64,14 @@
 			});
 		}*/
 	}
+
+
+	for(let y = 0; y < document.getElementsByClassName('nav-list-item').length; y++) {
+		document.getElementsByClassName('nav-list-item')[y].addEventListener('click', function() {
+			// Unchecks checkbox 'navi-toggle'
+			document.getElementById('navi-toggle').checked = false;
+		});
+	}
 });
 
 // helper function for sending an AJAX request

@@ -25,6 +25,7 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -432,14 +433,6 @@ button:hover::after {
 	cursor: pointer;
 }
 
-#navigation #navi-btn:hover #navi-icon::before {
-	top: -1rem;
-}
-
-#navigation #navi-btn:hover #navi-icon::after {
-	top: 1rem;
-}
-
 #navi-btn #navi-icon {
 	position: relative;
 }
@@ -466,6 +459,14 @@ button:hover::after {
 
 #navi-btn #navi-icon::after {
 	top: .8rem;
+}
+
+#navigation #navi-btn:hover #navi-icon::before {
+	top: -1rem;
+}
+
+#navigation #navi-btn:hover #navi-icon::after {
+	top: 1rem;
 }
 
 #navigation #navi-nav {
