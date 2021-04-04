@@ -545,6 +545,21 @@ button:hover::after {
 	transition: all .8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+#navigation #logo-container {
+	position: absolute;
+	top: 6rem;
+	left: 6rem;
+	z-index: 200;
+}
+
+#logo-container #logo {
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	-webkit-animation: pulse 1.5s infinite;
+	        animation: pulse 1.5s infinite;
+}
+
 #header {
 	height: 95vh;
 	background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../images/austin-distel-mpN7xjKQ_Ns-unsplash.jpg);
@@ -557,7 +572,7 @@ button:hover::after {
 	position: relative;
 }
 
-#header #logo-container {
+/* #header #logo-container {
 	position: absolute;
 	top: 4.6rem;
 	left: 4rem;
@@ -568,7 +583,7 @@ button:hover::after {
 	height: 7.4rem;
 	-webkit-animation: pulse 1.5s infinite;
 	        animation: pulse 1.5s infinite;
-}
+} */
 
 #header #slogan {
 	position: absolute;

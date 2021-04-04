@@ -66,10 +66,13 @@
 	}
 
 
-	for(let y = 0; y < document.getElementsByClassName('nav-list-item').length; y++) {
-		document.getElementsByClassName('nav-list-item')[y].addEventListener('click', function() {
+	for (let y = 0; y < document.getElementsByClassName('nav-list-item').length; y++) {
+		document.getElementsByClassName('nav-list-item')[y].addEventListener('click', function () {
 			// Unchecks checkbox 'navi-toggle'
 			document.getElementById('navi-toggle').checked = false;
+			setTimeout(function() {
+				window.location.hash;
+			}, 10000);
 		});
 	}
 });
