@@ -1,16 +1,19 @@
 ﻿/*----  #55c57a, #7ed56f, #28b485   Green----*/
 
+
 /*----  #ffb900, #ff7730, -------   Orange---*/
+
 
 /*----  #2998ff, #5643fa, -------   Blue-----*/
 
+@import url('../css/fonts.css');
 *,
 *::before,
 *::after {
 	padding: 0;
 	margin: 0;
 	-webkit-box-sizing: inherit;
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 ::-moz-selection {
@@ -42,9 +45,8 @@ body {
 	color: var(--primary-text-color);
 	padding: 2rem;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 /*--------------------------------------------------------*/
 /*-------------------- ANIMATIONS ------------------------*/
@@ -420,7 +422,6 @@ button:hover::after {
 	position: fixed;
 	top: 6rem;
 	right: 6rem;
-	z-index: 12;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -430,6 +431,7 @@ button:hover::after {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	z-index: 12;
 	cursor: pointer;
 }
 
@@ -549,7 +551,7 @@ button:hover::after {
 	position: absolute;
 	top: 6rem;
 	left: 6rem;
-	z-index: 200;
+	z-index: 9;
 }
 
 #logo-container #logo {
