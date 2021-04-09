@@ -208,3 +208,13 @@
       left: 18%;
     }
 }
+
+
+@media only screen and (max-width:20em) {     /*320px*/
+	#header #slogan {
+		top: 54%;
+		left: 50%;
+	}#header #slogan h1 {
+		margin-bottom: 3rem;
+	}
+}
