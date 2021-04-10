@@ -210,7 +210,7 @@
 }
 
 
-@media only screen and (max-width:20em) {     /*320px*/
+@media only screen and (max-width:22.5em) {     /*320px*/
 	#header #slogan {
 		top: 54.3%;
 		left: 50%;
